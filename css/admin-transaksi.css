@@ -1,0 +1,178 @@
+.table-card {
+    width: 100%;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    overflow-x: auto;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+}
+
+.transaction-count {
+    color: #777;
+    font-size: 13px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    padding: 12px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #e5e7eb;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    white-space: nowrap;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover td {
+    background: #fafafa;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.transaction-id {
+    font-weight: 600;
+}
+
+.button-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 11px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.button-detail:hover {
+    background: #e5e5e5;
+}
+
+.empty-data {
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.customer-name {
+    font-weight: 600;
+}
+
+.kasir-name {
+    color: #555;
+}
+
+
+/* SEARCH */
+
+.search-form {
+    position: relative;
+    width: 280px;
+}
+
+.search-input {
+    width: 100%;
+    height: 38px;
+    padding: 0 40px 0 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-size: 13px;
+    background: #fff;
+}
+
+.search-input:focus {
+    border-color: #999;
+}
+
+.search-reset {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.search-reset:hover {
+    color: #333;
+}
+
+
+/* PAGINATION */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 24px;
+}
+
+.pagination-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 9px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.pagination-button:hover {
+    background: #f5f5f5;
+}
+
+.pagination-button.active {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+}

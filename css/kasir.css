@@ -1,0 +1,546 @@
+/* =========================================================
+   FORM KASIR
+========================================================= */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+section {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   POSISI PANEL
+========================================================= */
+
+.panel-customer {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.panel-produk {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.panel-ringkasan {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.panel-pembayaran {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+.panel-customer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.panel-customer h2 {
+    grid-column: 1 / -1;
+}
+
+.panel-customer > div {
+    margin-bottom: 0;
+}
+
+.panel-customer .field-alamat {
+    grid-column: 1 / -1;
+}
+
+.panel-customer input,
+.panel-customer textarea {
+    max-width: none;
+}
+
+
+/* =========================================================
+   LABEL & INPUT
+========================================================= */
+
+label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+    background: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #555;
+}
+
+input[readonly] {
+    background: #f1f1f1;
+}
+
+
+/* =========================================================
+   DAFTAR PRODUK
+========================================================= */
+
+.panel-produk {
+    overflow: hidden;
+}
+
+.barang-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+
+/* =========================================================
+   CARD PRODUK
+========================================================= */
+
+.barang {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.barang img {
+    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border: none;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.barang h3 {
+    margin: 2px 0;
+    font-size: 15px;
+}
+
+.barang p {
+    margin: 2px 0;
+}
+
+.barang-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.barang-info input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.subtotal {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   JUMLAH PRODUK
+========================================================= */
+
+.jumlah-control {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-jumlah {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-minus {
+    border-radius: 6px 0 0 6px;
+}
+
+.btn-plus {
+    border-radius: 0 6px 6px 0;
+}
+
+.jumlah-input {
+    width: 100% !important;
+    height: 38px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Hilangkan spinner input number */
+.jumlah-input::-webkit-inner-spin-button,
+.jumlah-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.jumlah-input {
+    appearance: textfield;
+}
+
+
+/* =========================================================
+   RINGKASAN PEMBELIAN
+========================================================= */
+
+.panel-ringkasan dl {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    gap: 5px 10px;
+    margin: 0;
+    max-width: 500px;
+}
+
+.panel-ringkasan dt {
+    color: #555;
+}
+
+.panel-ringkasan dd {
+    margin: 0;
+    text-align: right;
+}
+
+#totalBarang,
+#totalHarga {
+    font-size: 20px;
+}
+
+.ringkasan-barang {
+    max-height: 230px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ringkasan-kosong {
+    color: #777;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.item-ringkasan {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-ringkasan:last-child {
+    border-bottom: none;
+}
+
+.item-ringkasan-nama {
+    font-weight: 600;
+}
+
+.item-ringkasan-detail {
+    color: #666;
+    font-size: 14px;
+}
+
+.item-ringkasan-total {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    font-weight: 600;
+}
+
+.id-transaksi {
+    margin: -20px 0 2px;
+    font-size: 14px;
+    color: #666;
+}
+
+.id-transaksi strong {
+    color: #222;
+}
+
+
+/* =========================================================
+   PEMBAYARAN + NUMPAD
+========================================================= */
+
+.pembayaran-layout {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* INPUT PEMBAYARAN */
+
+.input-pembayaran {
+    display: flex;
+    flex-direction: column;
+}
+
+#uang_bayar {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+/* KEMBALIAN */
+
+.kembalian {
+    margin-top: 20px;
+    padding: 15px;
+
+    background: #f5f6f8;
+    border-radius: 7px;
+}
+
+.kembalian p {
+    margin: 0;
+}
+
+#uangKembali {
+    font-size: 22px;
+}
+
+
+/* NUMPAD */
+
+.numpad {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+.numpad-btn {
+    height: 55px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    background: #f5f5f5;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.numpad-btn:hover {
+    background: #e8e8e8;
+}
+
+.numpad-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* CLEAR */
+
+.numpad-clear {
+    background: #eee;
+}
+
+
+/* BACKSPACE */
+
+.numpad-backspace {
+    background: #eee;
+}
+
+
+/* TOMBOL SIMPAN */
+
+.btn-simpan-transaksi {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px 20px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: #222;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.btn-simpan-transaksi:hover {
+    background: #444;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .pembayaran-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .numpad {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+}
+
+.kembalian p {
+    margin: 0;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .panel-customer,
+    .panel-produk,
+    .panel-ringkasan,
+    .panel-pembayaran {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .barang img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — HP
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-header,
+    .page-main {
+        width: 94%;
+    }
+
+    .page-header {
+        padding-top: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .barang {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .barang img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .barang > div:nth-child(3) input {
+        width: 100%;
+    }
+
+    .barang > div:nth-child(4) {
+        text-align: left;
+    }
+
+    .panel-ringkasan dl {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .panel-ringkasan dd {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    #totalBarang,
+    #totalHarga,
+    #uangKembali {
+        font-size: 20px;
+    }
+}

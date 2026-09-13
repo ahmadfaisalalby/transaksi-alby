@@ -1,0 +1,145 @@
+.detail-card {
+    width: 100%;
+    max-width: 900px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.detail-header h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.detail-header p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    padding: 14px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.info-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+.info-value {
+    display: block;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.detail-table th {
+    padding: 12px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #e5e7eb;
+    color: #555;
+    font-size: 13px;
+    text-align: left;
+}
+
+.detail-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.detail-table tr:last-child td {
+    border-bottom: none;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.summary {
+    max-width: 400px;
+    margin: 25px 0 0 auto;
+}
+
+.summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 9px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.summary-row.total {
+    padding-top: 15px;
+    margin-top: 5px;
+    border-top: 2px solid #222;
+    color: #222;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.summary-row.kembalian {
+    color: #222;
+    font-weight: 600;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+
+@media (max-width: 600px) {
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+
+    .detail-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .summary {
+        max-width: none;
+    }
+
+}  

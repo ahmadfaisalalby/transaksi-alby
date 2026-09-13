@@ -1,0 +1,30 @@
+/* =========================
+   HALAMAN PENGATURAN KASIR
+   ========================= */
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #222;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .settings-card {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+}

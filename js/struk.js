@@ -1,0 +1,3 @@
+function cetakStruk() {
+    window.print();
+}
